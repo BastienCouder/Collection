@@ -131,6 +131,7 @@ button.addEventListener("click", () => {
   contenus.forEach((contenu) => {
     contenu.style.display = "none";
   });
+  c;
 
   const paras = document.querySelectorAll(".para");
   paras.forEach((para) => {
