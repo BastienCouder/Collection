@@ -20,7 +20,7 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
   transition: 0.5s ease;
   position: relative;
 }
@@ -178,7 +178,7 @@ h1 {
 @media only screen and (max-width: 480px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(11, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     grid-gap: 0.4rem;
   }
 }
@@ -243,11 +243,6 @@ h1 {
   }
 }
 
-@media only screen and (max-width: 480px) {
-  .card {
-    z-index: 2;
-  }
-}
 .close {
   transform: translateY(-120px);
   transition: 0.9s ease-in-out;
@@ -289,6 +284,7 @@ button {
 
 .pointer-event {
   pointer-events: none;
+  overflow: hidden;
 }
 
 .except-pointer-event {
