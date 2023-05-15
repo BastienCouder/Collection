@@ -11,7 +11,7 @@ cards.forEach((card) => {
     }, 400);
     document.body.classList.add("pointer-event");
     button.classList.add("except-pointer-event");
-
+    document.body.style.overflow = " hidden";
     //
     //
     const titre = document.querySelector(".titre");
