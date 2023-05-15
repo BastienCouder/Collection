@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Etho";
-  src: url("fonts/ethnocentric rg.otf");
+  src: url("/fonts/ethnocentric rg.otf");
 }
 ::-moz-selection {
   display: none;
