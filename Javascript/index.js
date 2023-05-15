@@ -36,6 +36,13 @@ cards.forEach((card) => {
       if (contenu.id === card.dataset.target) {
         contenu.style.display = "block";
 
+        const paras = contenu.querySelectorAll(".para");
+        paras.forEach((para) => {
+          setTimeout(() => {
+            para.classList.add("active-para");
+          }, 400);
+        });
+
         const titres = contenu.querySelectorAll("h2");
         titres.forEach((titre) => {
           setTimeout(() => {
@@ -61,6 +68,7 @@ cards.forEach((card) => {
         setTimeout(function () {
           otherCards[i].style.transform = "scale(0.8)";
           otherCards[i].style.transition = "0.5s ease-in-out 0.1s";
+          otherCards[i].style.zIndex = "1";
         }, i * 55);
       }
     });
@@ -107,7 +115,9 @@ button.addEventListener("click", () => {
 
   // Remove the "except-pointer-event" class from the button and the "pointer-event" class from the body
   button.classList.remove("except-pointer-event");
-  document.body.classList.remove("pointer-event");
+  setTimeout(() => {
+    document.body.classList.remove("pointer-event");
+  }, 700);
 
   // Loop through all the cards and remove the "act" attribute, reset their transform and transition properties
   cards.forEach((card) => {
@@ -120,6 +130,11 @@ button.addEventListener("click", () => {
   const contenus = document.querySelectorAll(".contenu");
   contenus.forEach((contenu) => {
     contenu.style.display = "none";
+  });
+
+  const paras = document.querySelectorAll(".para");
+  paras.forEach((para) => {
+    para.classList.remove("active-para");
   });
 
   // Reset the title and paragraph elements' classes to remove the animation
