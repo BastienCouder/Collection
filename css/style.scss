@@ -101,7 +101,7 @@ h1 {
 @media only screen and (max-width: 480px) {
   .line-left,
   .line-right {
-    top: clamp(50%, 85vw, 51%);
+    top: clamp(49%, 85vw, 51%);
   }
 }
 
@@ -184,7 +184,7 @@ h1 {
 @media only screen and (max-width: 480px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(11, 1fr);
     grid-gap: 0.4rem;
   }
 }
