@@ -68,7 +68,7 @@ cards.forEach((card) => {
         setTimeout(function () {
           otherCards[i].style.transform = "scale(0.8)";
           otherCards[i].style.transition = "0.5s ease-in-out 0.1s";
-          otherCards[i].style.zIndex = "1";
+          otherCards[i].style.zIndex = "-1";
         }, i * 55);
       }
     });
@@ -124,6 +124,7 @@ button.addEventListener("click", () => {
     card.removeAttribute("act");
     card.style.transform = "scale(1)";
     card.style.transition = "none";
+    card.style.zIndex = "auto";
   });
 
   // Hide all the content sections

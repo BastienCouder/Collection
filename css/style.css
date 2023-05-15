@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Etho";
-  src: url("./ethnocentric rg.otf");
+  src: url("/ethnocentric rg.otf");
 }
 ::-moz-selection {
   display: none;
@@ -178,7 +178,7 @@ h1 {
 @media only screen and (max-width: 480px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(11, 1fr);
     grid-gap: 0.4rem;
   }
 }
@@ -215,6 +215,7 @@ h1 {
   transition: 1s ease-in-out;
 }
 .card img {
+  z-index: 2;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -237,6 +238,7 @@ h1 {
     padding: 0.3rem;
   }
   .card .active-para {
+    z-index: 99999;
     transition: 1s ease-in-out;
     opacity: 1;
     transform: translate(-50%, 122%);
