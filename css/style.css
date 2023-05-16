@@ -6,12 +6,16 @@
 
 @font-face {
   font-family: "Etho";
-  src: url("../etho.otf");
+  src: url("../etho.otf") format("opentype"), url("../etho.ttf") format("truetype"), url("../etho.woff") format("woff") url("../etho.woff2") format("woff2");
 }
 ::-moz-selection {
   display: none;
 }
 ::selection {
+  display: none;
+}
+
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -187,7 +191,7 @@ h1 {
 @media only screen and (max-width: 480px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(11, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     grid-gap: 0.4rem;
   }
 }
