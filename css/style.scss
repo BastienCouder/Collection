@@ -29,7 +29,7 @@ body {
 
 h1 {
   height: auto;
-  font-family: "Etho";
+  font-family: "Etho", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   z-index: 9999;
   background: linear-gradient(
     45deg,
@@ -118,7 +118,7 @@ h1 {
   display: flex;
   justify-content: center;
   height: auto;
-  font-family: "Etho";
+  font-family: "Etho", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   z-index: 9999;
   background: linear-gradient(
     45deg,
@@ -231,7 +231,7 @@ h1 {
       transform: translateY(20px);
       opacity: 0;
       text-align: justify;
-      font-size: 4px;
+      font-size: 0.25rem;
       width: 75%;
     }
     .active-h2,
@@ -243,10 +243,10 @@ h1 {
 
     @media only screen and (max-width: 480px) {
       h2 {
-        font-size: 0.5em;
+        font-size: 0.3em;
       }
       p {
-        font-size: 5px;
+        font-size: 0.25rem;
         width: 100%;
       }
     }

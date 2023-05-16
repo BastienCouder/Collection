@@ -1,4 +1,4 @@
-let monObjet = {
+let textImg = {
   titre: "Hello-World",
   images: [
     "./image1.jpg",
@@ -16,8 +16,8 @@ let monObjet = {
   ],
 };
 
-document.querySelector(".titre").innerHTML = monObjet.titre;
+document.querySelector(".titre").innerHTML = textImg.titre;
 let images = document.querySelectorAll(".image");
 images.forEach((image, index) => {
-  image.src = monObjet.images[index];
+  image.src = textImg.images[index];
 });
