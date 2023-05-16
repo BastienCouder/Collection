@@ -10,8 +10,11 @@ cards.forEach((card) => {
       button.classList.add("active-close");
     }, 400);
     document.body.classList.add("pointer-event");
-    document.body.style.overflowY = "hidden";
     button.classList.add("except-pointer-event");
+
+    if (window.scrollY) {
+      window.scroll(0, 0); // reset the scroll position to the top left of the document.
+    }
 
     //
     //
