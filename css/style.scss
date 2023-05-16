@@ -30,7 +30,7 @@ body {
 h1 {
   height: auto;
   font-family: "Etho", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  z-index: 9999;
+  z-index: 1;
   background: linear-gradient(
     45deg,
     rgba(105, 233, 230, 1) 0%,
@@ -42,11 +42,16 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -75%);
-  letter-spacing: 0.8rem;
+  letter-spacing: 2.5rem;
   font-size: clamp(1.2em, 7vw, 7em);
   opacity: 1;
   visibility: visible;
   transition: 1s ease-in-out;
+}
+@media only screen and (min-width: 1540px) {
+  h1 {
+    font-size: 8em;
+  }
 }
 @media only screen and (max-width: 1068px) {
   h1 {
@@ -123,11 +128,11 @@ h1 {
 
 .titre {
   width: 100%;
+  z-index: 1;
   display: flex;
   justify-content: center;
   height: auto;
   font-family: "Etho", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  z-index: 9999;
   background: linear-gradient(
     45deg,
     rgba(105, 233, 230, 1) 0%,
@@ -152,6 +157,12 @@ h1 {
   transform: translate(-50%, -75%);
   visibility: visible;
 }
+@media only screen and (min-width: 1540px) {
+  .titre {
+    font-size: 8em;
+  }
+}
+
 @media only screen and (max-width: 1068px) {
   .titre {
     transform: translate(-50%, -70%);
@@ -247,6 +258,16 @@ h1 {
       transform: translateY(0);
       opacity: 1;
       transition: 1s ease-in-out;
+    }
+
+    @media only screen and (min-width: 1540px) {
+      h2 {
+        font-size: 0.45em;
+      }
+      p {
+        font-size: 0.3rem;
+        width: 100%;
+      }
     }
 
     @media only screen and (max-width: 480px) {

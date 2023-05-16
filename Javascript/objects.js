@@ -1,5 +1,5 @@
 let textImg = {
-  titre: "Hello-World",
+  titre: "Collection",
   images: [
     "./image1.jpg",
     "./image2.jpg",
