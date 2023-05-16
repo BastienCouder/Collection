@@ -118,6 +118,7 @@ button.addEventListener("click", () => {
   setTimeout(() => {
     document.body.classList.remove("pointer-event");
   }, 700);
+  document.body.style.overflow = " scroll";
 
   // Loop through all the cards and remove the "act" attribute, reset their transform and transition properties
   cards.forEach((card) => {
