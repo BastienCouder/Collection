@@ -41,7 +41,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -75%);
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.8rem;
   font-size: clamp(1.2em, 7vw, 7em);
   opacity: 1;
   visibility: visible;
@@ -60,6 +60,7 @@ h1 {
 }
 @media only screen and (max-width: 480px) {
   h1 {
+    letter-spacing: 0.4rem;
     transform: translate(-50%, -140%);
   }
 }
@@ -109,7 +110,14 @@ h1 {
     top: clamp(49%, 85vw, 51%);
   }
   .line {
-    width: 40%;
+    width: 35%;
+    height: 0.2rem;
+  }
+  .line-left {
+    left: 9.5%;
+  }
+  .line-right {
+    right: 9.5%;
   }
 }
 .titre {
