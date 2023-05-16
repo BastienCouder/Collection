@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Etho";
-  src: url("../etho.otf") format("opentype"), url("../etho.ttf") format("truetype"), url("../etho.woff") format("woff") url("../etho.woff2") format("woff2");
+  src: url("../etho.otf"), url("../etho.ttf"), url("../etho.woff"), url("../etho.woff2");
 }
 ::-moz-selection {
   display: none;
@@ -107,6 +107,9 @@ h1 {
   .line-left,
   .line-right {
     top: clamp(49%, 85vw, 51%);
+  }
+  .line {
+    width: 40%;
   }
 }
 .titre {
@@ -226,6 +229,15 @@ h1 {
   opacity: 1;
   transition: 1s ease-in-out;
 }
+@media only screen and (max-width: 480px) {
+  .card .contenu h2 {
+    font-size: 0.5em;
+  }
+  .card .contenu p {
+    font-size: 5px;
+    width: 100%;
+  }
+}
 .card img {
   position: absolute;
   width: 100%;
@@ -246,7 +258,7 @@ h1 {
     position: fixed;
     transform: translate(-50%, 180%);
     transition: 1s ease-in-out;
-    padding: 0.3rem;
+    padding: 0.3rem 0.4rem;
   }
   .card .active-para {
     transition: 1s ease-in-out;
