@@ -10,8 +10,9 @@ cards.forEach((card) => {
       button.classList.add("active-close");
     }, 400);
     document.body.classList.add("pointer-event");
+    document.body.style.overflowY = "hidden";
     button.classList.add("except-pointer-event");
-    window.style.overflow = " hidden";
+
     //
     //
     const titre = document.querySelector(".titre");
@@ -118,7 +119,7 @@ button.addEventListener("click", () => {
   setTimeout(() => {
     document.body.classList.remove("pointer-event");
   }, 700);
-  window.style.overflow = " scroll";
+  document.body.style.overflowY = "auto";
 
   // Loop through all the cards and remove the "act" attribute, reset their transform and transition properties
   cards.forEach((card) => {
