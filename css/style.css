@@ -246,7 +246,7 @@ h1 {
 }
 @media only screen and (min-width: 1540px) {
   .card .contenu {
-    left: -50%;
+    left: -55%;
     width: 45%;
   }
 }
