@@ -269,6 +269,17 @@ h1 {
     font-size: 0.45em;
   }
 }
+@media only screen and (max-width: 778px) {
+  .card .contenu h2 {
+    width: 100%;
+    font-size: 0.5rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .card .contenu h2 {
+    font-size: 0.4rem;
+  }
+}
 .card .contenu p {
   transform: translateY(20px);
   opacity: 0;
@@ -280,6 +291,17 @@ h1 {
   .card .contenu p {
     font-size: 0.3rem;
     width: 100%;
+  }
+}
+@media only screen and (max-width: 778px) {
+  .card .contenu p {
+    width: 100%;
+    font-size: 0.4rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .card .contenu p {
+    font-size: 0.25rem;
   }
 }
 .card .contenu .active-h2,

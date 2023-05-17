@@ -241,6 +241,13 @@ h1 {
       @media only screen and (min-width: 1540px) {
         font-size: 0.45em;
       }
+      @media only screen and (max-width: 778px) {
+        width: 100%;
+        font-size: 0.5rem;
+      }
+      @media only screen and (max-width: 480px) {
+        font-size: 0.4rem;
+      }
     }
 
     p {
@@ -253,6 +260,13 @@ h1 {
       @media only screen and (min-width: 1540px) {
         font-size: 0.3rem;
         width: 100%;
+      }
+      @media only screen and (max-width: 778px) {
+        width: 100%;
+        font-size: 0.4rem;
+      }
+      @media only screen and (max-width: 480px) {
+        font-size: 0.25rem;
       }
     }
     .active-h2,
