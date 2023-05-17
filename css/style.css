@@ -47,7 +47,6 @@ h1 {
   visibility: visible;
   transition: 1s ease-in-out;
 }
-
 @media only screen and (min-width: 1540px) {
   h1 {
     font-size: 8em;
@@ -72,6 +71,7 @@ h1 {
     transform: translate(-50%, -140%);
   }
 }
+
 .active-h1 {
   opacity: 0;
   transition: 1s ease-in-out;
@@ -86,20 +86,35 @@ h1 {
   background: white;
   height: 0.25rem;
 }
+@media only screen and (max-width: 480px) {
+  .line {
+    width: 35%;
+    height: 0.2rem;
+  }
+}
 
 .line-left {
   left: 15.5%;
 }
+@media only screen and (max-width: 480px) {
+  .line-left {
+    left: 9.5%;
+  }
+}
 
 .line-right {
   right: 15.5%;
+}
+@media only screen and (max-width: 480px) {
+  .line-right {
+    right: 9.5%;
+  }
 }
 
 .line-left,
 .line-right {
   top: clamp(49%, 35vw, 55%);
 }
-
 @media only screen and (max-width: 1068px) {
   .line-left,
   .line-right {
@@ -117,17 +132,8 @@ h1 {
   .line-right {
     top: clamp(49%, 85vw, 51%);
   }
-  .line {
-    width: 35%;
-    height: 0.2rem;
-  }
-  .line-left {
-    left: 9.5%;
-  }
-  .line-right {
-    right: 9.5%;
-  }
 }
+
 .titre {
   width: 100%;
   z-index: 1;
@@ -149,14 +155,6 @@ h1 {
   visibility: hidden;
   transition: 1s ease-in-out;
 }
-
-.active-titre {
-  opacity: 1;
-  transition: 1s ease-in-out;
-  transform: translate(-50%, -75%);
-  visibility: visible;
-}
-
 @media only screen and (min-width: 1540px) {
   .titre {
     font-size: 8em;
@@ -166,26 +164,40 @@ h1 {
   .titre {
     transform: translate(-50%, -70%);
   }
-  .active-titre {
-    transform: translate(-50%, -100%);
-  }
 }
 @media only screen and (max-width: 768px) {
   .titre {
     transform: translate(-50%, -70%);
-  }
-  .active-titre {
-    transform: translate(-50%, -110%);
   }
 }
 @media only screen and (max-width: 480px) {
   .titre {
     transform: translate(-50%, -75%);
   }
+}
+
+.active-titre {
+  opacity: 1;
+  transition: 1s ease-in-out;
+  transform: translate(-50%, -75%);
+  visibility: visible;
+}
+@media only screen and (max-width: 1068px) {
+  .active-titre {
+    transform: translate(-50%, -100%);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .active-titre {
+    transform: translate(-50%, -110%);
+  }
+}
+@media only screen and (max-width: 480px) {
   .active-titre {
     transform: translate(-50%, -140%);
   }
 }
+
 .grid {
   transform-origin: center;
   position: relative;
@@ -197,7 +209,6 @@ h1 {
   width: 100%;
   height: 100%;
 }
-
 @media only screen and (max-width: 1068px) {
   .grid {
     grid-template-columns: repeat(7, 1fr);
@@ -219,6 +230,7 @@ h1 {
     grid-gap: 0.4rem;
   }
 }
+
 .card {
   position: relative;
 }
@@ -231,6 +243,11 @@ h1 {
   width: 50%;
   position: absolute;
   display: none;
+}
+@media only screen and (min-width: 1540px) {
+  .card .contenu {
+    width: 45%;
+  }
 }
 @media only screen and (max-width: 1068px) {
   .card .contenu {
@@ -246,6 +263,11 @@ h1 {
   -webkit-padding-after: 0.1rem;
           padding-block-end: 0.1rem;
 }
+@media only screen and (min-width: 1540px) {
+  .card .contenu h2 {
+    font-size: 0.45em;
+  }
+}
 .card .contenu p {
   transform: translateY(20px);
   opacity: 0;
@@ -253,29 +275,17 @@ h1 {
   font-size: 0.25rem;
   width: 75%;
 }
-.card .contenu .active-h2,
-.card .contenu .active-p {
-  transform: translateY(0);
-  opacity: 1;
-  transition: 1s ease-in-out;
-}
 @media only screen and (min-width: 1540px) {
-  .card .contenu h2 {
-    font-size: 0.45em;
-  }
   .card .contenu p {
     font-size: 0.3rem;
     width: 100%;
   }
 }
-@media only screen and (max-width: 480px) {
-  .card .contenu h2 {
-    font-size: 0.3em;
-  }
-  .card .contenu p {
-    font-size: 0.25rem;
-    width: 100%;
-  }
+.card .contenu .active-h2,
+.card .contenu .active-p {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 1s ease-in-out;
 }
 .card img {
   position: absolute;
@@ -338,25 +348,24 @@ h1 {
   right: 8rem;
   z-index: 9999;
 }
-
-.active-close {
-  transform: translateY(0);
-  opacity: 1;
-}
-
 @media only screen and (max-width: 480px) {
   .close {
     top: 2rem;
     right: 50%;
     transform: translate(50%, -120px);
   }
+}
+
+.active-close {
+  transform: translateY(0);
+  opacity: 1;
+}
+@media only screen and (max-width: 480px) {
   .active-close {
     transform: translate(50%, 0);
   }
-  button {
-    padding: 0.6rem 0.8rem;
-  }
 }
+
 button {
   color: aliceblue;
   font-size: 1.2em;
@@ -366,6 +375,11 @@ button {
   cursor: pointer;
   position: relative;
   background-color: transparent;
+}
+@media only screen and (max-width: 480px) {
+  button {
+    padding: 0.6rem 0.8rem;
+  }
 }
 
 .pointer-event {

@@ -47,33 +47,27 @@ h1 {
   opacity: 1;
   visibility: visible;
   transition: 1s ease-in-out;
-}
-@media only screen and (min-width: 1540px) {
-  h1 {
+
+  @media only screen and (min-width: 1540px) {
     font-size: 8em;
     letter-spacing: 3rem;
   }
-}
-@media only screen and (max-width: 1068px) {
-  h1 {
+  @media only screen and (max-width: 1068px) {
     transform: translate(-50%, -100%);
     letter-spacing: 2rem;
   }
-}
 
-@media only screen and (max-width: 768px) {
-  h1 {
+  @media only screen and (max-width: 768px) {
     transform: translate(-50%, -110%);
     letter-spacing: 1rem;
   }
-}
 
-@media only screen and (max-width: 480px) {
-  h1 {
+  @media only screen and (max-width: 480px) {
     letter-spacing: 0.6rem;
     transform: translate(-50%, -140%);
   }
 }
+
 .active-h1 {
   opacity: 0;
   transition: 1s ease-in-out;
@@ -87,45 +81,41 @@ h1 {
   width: 31%;
   background: white;
   height: 0.25rem;
-}
-.line-left {
-  left: 15.5%;
-}
-.line-right {
-  right: 15.5%;
-}
-.line-left,
-.line-right {
-  top: clamp(49%, 35vw, 55%);
-}
-@media only screen and (max-width: 1068px) {
-  .line-left,
-  .line-right {
-    top: clamp(50%, 40vw, 51%);
-  }
-}
 
-@media only screen and (max-width: 768px) {
-  .line-left,
-  .line-right {
-    top: clamp(50%, 60vw, 51%);
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .line-left,
-  .line-right {
-    top: clamp(49%, 85vw, 51%);
-  }
-  .line {
+  @media only screen and (max-width: 480px) {
     width: 35%;
     height: 0.2rem;
   }
-  .line-left {
+}
+.line-left {
+  left: 15.5%;
+
+  @media only screen and (max-width: 480px) {
     left: 9.5%;
   }
-  .line-right {
+}
+.line-right {
+  right: 15.5%;
+
+  @media only screen and (max-width: 480px) {
     right: 9.5%;
+  }
+}
+
+.line-left,
+.line-right {
+  top: clamp(49%, 35vw, 55%);
+
+  @media only screen and (max-width: 1068px) {
+    top: clamp(50%, 40vw, 51%);
+  }
+
+  @media only screen and (max-width: 768px) {
+    top: clamp(50%, 60vw, 51%);
+  }
+
+  @media only screen and (max-width: 480px) {
+    top: clamp(49%, 85vw, 51%);
   }
 }
 
@@ -152,6 +142,21 @@ h1 {
   opacity: 0;
   visibility: hidden;
   transition: 1s ease-in-out;
+
+  @media only screen and (min-width: 1540px) {
+    font-size: 8em;
+  }
+
+  @media only screen and (max-width: 1068px) {
+    transform: translate(-50%, -70%);
+  }
+
+  @media only screen and (max-width: 768px) {
+    transform: translate(-50%, -70%);
+  }
+  @media only screen and (max-width: 480px) {
+    transform: translate(-50%, -75%);
+  }
 }
 
 .active-titre {
@@ -159,39 +164,19 @@ h1 {
   transition: 1s ease-in-out;
   transform: translate(-50%, -75%);
   visibility: visible;
-}
-@media only screen and (min-width: 1540px) {
-  .titre {
-    font-size: 8em;
-  }
-}
 
-@media only screen and (max-width: 1068px) {
-  .titre {
-    transform: translate(-50%, -70%);
-  }
-  .active-titre {
+  @media only screen and (max-width: 1068px) {
     transform: translate(-50%, -100%);
   }
-}
 
-@media only screen and (max-width: 768px) {
-  .titre {
-    transform: translate(-50%, -70%);
-  }
-  .active-titre {
+  @media only screen and (max-width: 768px) {
     transform: translate(-50%, -110%);
   }
-}
-
-@media only screen and (max-width: 480px) {
-  .titre {
-    transform: translate(-50%, -75%);
-  }
-  .active-titre {
+  @media only screen and (max-width: 480px) {
     transform: translate(-50%, -140%);
   }
 }
+
 .grid {
   transform-origin: center;
   position: relative;
@@ -202,26 +187,20 @@ h1 {
   grid-gap: 0.5rem;
   width: 100%;
   height: 100%;
-}
 
-@media only screen and (max-width: 1068px) {
-  .grid {
+  @media only screen and (max-width: 1068px) {
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-gap: 0.4rem;
   }
-}
 
-@media only screen and (max-width: 768px) {
-  .grid {
+  @media only screen and (max-width: 768px) {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(7, 1fr);
     grid-gap: 0.4rem;
   }
-}
 
-@media only screen and (max-width: 480px) {
-  .grid {
+  @media only screen and (max-width: 480px) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(10, 1fr);
     grid-gap: 0.4rem;
@@ -242,6 +221,10 @@ h1 {
     position: absolute;
     display: none;
 
+    @media only screen and (min-width: 1540px) {
+      width: 45%;
+    }
+
     @media only screen and (max-width: 1068px) {
       top: 57%;
       left: -54%;
@@ -253,6 +236,10 @@ h1 {
       opacity: 0;
       font-size: 0.4em;
       padding-block-end: 0.1rem;
+
+      @media only screen and (min-width: 1540px) {
+        font-size: 0.45em;
+      }
     }
 
     p {
@@ -261,32 +248,17 @@ h1 {
       text-align: justify;
       font-size: 0.25rem;
       width: 75%;
+
+      @media only screen and (min-width: 1540px) {
+        font-size: 0.3rem;
+        width: 100%;
+      }
     }
     .active-h2,
     .active-p {
       transform: translateY(0);
       opacity: 1;
       transition: 1s ease-in-out;
-    }
-
-    @media only screen and (min-width: 1540px) {
-      h2 {
-        font-size: 0.45em;
-      }
-      p {
-        font-size: 0.3rem;
-        width: 100%;
-      }
-    }
-
-    @media only screen and (max-width: 480px) {
-      h2 {
-        font-size: 0.3em;
-      }
-      p {
-        font-size: 0.25rem;
-        width: 100%;
-      }
     }
   }
 
@@ -354,24 +326,20 @@ h1 {
   top: 4rem;
   right: 8rem;
   z-index: 9999;
+
+  @media only screen and (max-width: 480px) {
+    top: 2rem;
+    right: 50%;
+    transform: translate(50%, -120px);
+  }
 }
 
 .active-close {
   transform: translateY(0);
   opacity: 1;
-}
 
-@media only screen and (max-width: 480px) {
-  .close {
-    top: 2rem;
-    right: 50%;
-    transform: translate(50%, -120px);
-  }
-  .active-close {
+  @media only screen and (max-width: 480px) {
     transform: translate(50%, 0);
-  }
-  button {
-    padding: 0.6rem 0.8rem;
   }
 }
 
@@ -384,7 +352,12 @@ button {
   cursor: pointer;
   position: relative;
   background-color: transparent;
+
+  @media only screen and (max-width: 480px) {
+    padding: 0.6rem 0.8rem;
+  }
 }
+
 .pointer-event {
   pointer-events: none;
 }
